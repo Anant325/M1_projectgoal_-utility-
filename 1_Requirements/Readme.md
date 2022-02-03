@@ -1,1 +1,30 @@
-* Description
+Requirements
+
+ Introduction
+
+    The aim of the project is to provide information of the calculation System .The project has been developed to carry out process easily and quickly.The system enables the user to Currency Calculator ,Basic Calculator ,Unit Conversion ,Complex Number ,and extra added feature .
+
+ Requirements
+     
+     High Level Requirements 
+
+     *Currency Calculator 
+     *Basic Calculator 
+     *Unit Conversion 
+     *Complex Number 
+     *Extra Feature like sqrt,Pallindrome,factorial,etc
+    
+    Low Level requirements
+     *Currency Calculator - In this  we will have diffrent curreccy of countries and we will can calculate it through there
+     *Basic Calaculator - This is a basic calculator .
+     *Unit Conversion - This is calculator for conversion of unit.
+     *Complex number - Diffrent calculation for complex numbers .
+     *Extra frature -In this we have to extra feature we can for calculator .
+
+     SWOT ANALYSIS
+     
+    Strengths - In This We can Do  Major Calculation  which is required in this modern World.
+    Weakness - Youth Generation require Calculator  generally callage students.
+    Opportunities - Sometimes  there can be isse in float  calculation .
+    Threats - Competition .
+    
