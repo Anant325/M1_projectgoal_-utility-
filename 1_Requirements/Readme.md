@@ -28,3 +28,20 @@ Requirements
     Opportunities - Sometimes  there can be isse in float  calculation .
     Threats - Competition .
     
+     4 Ws & 1H
+     
+     Who
+     
+     What 
+     To bulid a system to Currency Calculator ,Basic Calculator ,Unit Conversion ,Complex Number ,and extra added feature.
+      
+     When
+     When user wants to carry out the Calculation  quickly and this also  reduces manual Calculation and saves time..
+     
+     Where
+     It can be used by students
+     
+     How 
+     It is going to have two diffrent modes -
+     *Standard - It preforms diffrent basic calculation 
+     *Sintefic - It is going to perform all complex claculations with conversions .
