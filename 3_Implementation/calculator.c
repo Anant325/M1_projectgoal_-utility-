@@ -57,7 +57,7 @@ int main()
     
     return 0;
 }
-void Calculator()
+int Calculator()
 {
     float n1, n2, r=0;
    int selc;
@@ -102,7 +102,7 @@ void Calculator()
       printf("\n------------------------\n");
    }while(selc!=5);
    getch();
-   return 0;
+  // return 0;
 }
 
 
