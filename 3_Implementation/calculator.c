@@ -101,8 +101,8 @@ int Calculator()
       }
       printf("\n------------------------\n");
    }while(selc!=5);
-   getch();
-  // return 0;
+   getc();
+   return 0;
 }
 
 
