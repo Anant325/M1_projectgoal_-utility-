@@ -34,7 +34,7 @@ int main()
     if( ip == 1)
     {
       printf("You have Selected Standard Mode\n")  ;
-      Calculator() ;
+      calc() ;
       exit(0);
     }
     else if (ip == 2)
@@ -57,7 +57,7 @@ int main()
     
     return 0;
 }
-int Calculator()
+int calc()
 {
     float n1, n2, r=0;
    int selc;
@@ -101,8 +101,8 @@ int Calculator()
       }
       printf("\n------------------------\n");
    }while(selc!=5);
-   getc();
-   return 0;
+   //getc();
+  // return 0;
 }
 
 
