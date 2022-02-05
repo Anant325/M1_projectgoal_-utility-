@@ -11,57 +11,14 @@
 
 #include <stdio.h>
 #include <stdlib.h> 
+//#include <Calculator.h>
 
-int main()
-{ 
-    int ip;
-    
-    printf("****************************************************************************************\n");
-    printf("****************************************************************************************\n");
-    printf("*##                                                                                  ##*\n");
-    printf("*##                                                                                  ##*\n");
-    printf("*##                                  CALCULATOR                                      ##*\n");
-    printf("*##                                                                                  ##*\n");
-    printf("*##                                                                                  ##*\n");
-    printf("****************************************************************************************\n");
-    printf("****************************************************************************************\n");
-    printf("Type Of Calculator\n");
-    printf("1.Standard\n");
-    printf("2.Sintific\n");
-    scanf("%d",&ip);
-    do{
-        
-    if( ip == 1)
-    {
-      printf("You have Selected Standard Mode\n")  ;
-      calc() ;
-      exit(0);
-    }
-    else if (ip == 2)
-    {
-        printf("You have Selected Sintific Mode\n")  ;
-        
-       exit(0); 
-    }
-    else 
-    {
-      printf("Wrong Input/n");
-      printf("\n------------------------\n");
-      
-      exit(0);
-    }
-    }while(ip<=2);
-    
-    
-    
-    
-    return 0;
-}
-int calc()
+int  Calculator()
 {
     float n1, n2, r=0;
    int selc;
    do
+
    {
       printf("1. Addition\n");
       printf("2. Subtraction\n");
@@ -102,7 +59,53 @@ int calc()
       printf("\n------------------------\n");
    }while(selc!=5);
    //getc();
-  // return 0;
+   return 0;
+}
+
+int main()
+{ 
+    int ip;
+    
+    printf("****************************************************************************************\n");
+    printf("****************************************************************************************\n");
+    printf("*##                                                                                  ##*\n");
+    printf("*##                                                                                  ##*\n");
+    printf("*##                                  CALCULATOR                                      ##*\n");
+    printf("*##                                                                                  ##*\n");
+    printf("*##                                                                                  ##*\n");
+    printf("****************************************************************************************\n");
+    printf("****************************************************************************************\n");
+    printf("Type Of Calculator\n");
+    printf("1.Standard\n");
+    printf("2.Sintific\n");
+    scanf("%d",&ip);
+    do{
+        
+    if( ip == 1)
+    {
+      printf("You have Selected Standard Mode\n")  ;
+      Calculator ();
+      exit(0);
+    }
+    else if (ip == 2)
+    {
+        printf("You have Selected Sintific Mode\n")  ;
+        
+       exit(0); 
+    }
+    else 
+    {
+      printf("Wrong Input/n");
+      printf("\n------------------------\n");
+      
+      exit(0);
+    }
+    }while(ip<=2);
+    
+    
+    
+    
+    return 0;
 }
 
 
