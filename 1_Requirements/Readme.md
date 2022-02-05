@@ -31,7 +31,7 @@ Requirements
      4 Ws & 1H
      
      Who
-     Anyone who is interested can use it
+     The person who does large calculation is the prime coustomer
 
      
      What 
