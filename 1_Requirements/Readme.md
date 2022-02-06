@@ -44,6 +44,6 @@ Requirements
      How 
      It is going to have three diffrent modes -
      *Standard - It preforms diffrent basic calculation 
-     *Sintefic - It is going to perform all complex claculations with conversions .
+     *Scientific - It is going to perform all complex claculations with conversions .
      * Extra - It is goinf to preform calculation like temprature,unit conversion ,etc
-     
+

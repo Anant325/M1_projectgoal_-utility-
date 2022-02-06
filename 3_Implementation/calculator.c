@@ -77,7 +77,7 @@ int main()
     printf("****************************************************************************************\n");
     printf("Type Of Calculator\n");
     printf("1.Standard\n");
-    printf("2.Sintific\n");
+    printf("2.Scientific\n");
     scanf("%d",&ip);
     do{
         
@@ -89,7 +89,7 @@ int main()
     }
     else if (ip == 2)
     {
-        printf("You have Selected Sintific Mode\n")  ;
+        printf("You have Selected Scientific Mode\n")  ;
         
        exit(0); 
     }
