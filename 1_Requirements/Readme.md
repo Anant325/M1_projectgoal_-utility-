@@ -8,15 +8,13 @@ Requirements
      
      High Level Requirements 
 
-     *Currency Calculator 
      *Basic Calculator 
      *Unit Conversion 
      *Complex Number 
-     *Extra Feature like sqrt,Pallindrome,factorial,etc
+     *Extra Feature like ,Pallindrome,factorial,etc
     
     Low Level requirements
-     *Currency Calculator - In this  we will have diffrent curreccy of countries and we will can calculate it through there
-     *Basic Calaculator - This is a basic calculator .
+     *Basic Calaculator - This is a basic calculator which will perform normal calculation .
      *Unit Conversion - This is calculator for conversion of unit.
      *Complex number - Diffrent calculation for complex numbers .
      *Extra frature -In this we have to extra feature we can for calculator .
