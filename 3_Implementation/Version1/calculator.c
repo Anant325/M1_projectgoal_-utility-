@@ -14,9 +14,9 @@
 #include <ctype.h>
 
 /**
- * @brief 
+ * @brief  to perdorm basic calculation
  * 
- *
+ * @return int 
  */
 int  Calculator()
 {
@@ -62,7 +62,7 @@ int  Calculator()
             break;
       }
       printf("\n------------------------\n");
-   }while((selc!=5)||(isdigit(selc));
+   }while((selc!=5)||(isdigit(!selc));
    //getc();
    return 0;
 }
