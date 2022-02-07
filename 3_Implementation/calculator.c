@@ -11,8 +11,13 @@
 
 #include <stdio.h>
 #include <stdlib.h> 
+#include <ctype.h>
 
-
+/**
+ * @brief 
+ * 
+ *
+ */
 int  Calculator()
 {
     float n1, n2, r=0;
@@ -57,7 +62,7 @@ int  Calculator()
             break;
       }
       printf("\n------------------------\n");
-   }while(selc!=5);
+   }while((selc!=5)||(isdigit(selc));
    //getc();
    return 0;
 }
