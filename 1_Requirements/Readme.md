@@ -1,9 +1,11 @@
 Requirements
 
- Introduction
+ __Introduction__
 
     The aim of the project is to provide information of the calculation System .The project has been developed to carry out process easily and quickly.The system enables the user to Currency Calculator ,Basic Calculator ,Unit Conversion ,Complex Number ,and extra added feature .
 
+ Research 
+  Now a days many people require calculator . It is used in may day to day work.
  Requirements
      
      High Level Requirements 
