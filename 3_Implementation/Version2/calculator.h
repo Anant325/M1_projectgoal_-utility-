@@ -7,6 +7,9 @@
 
 #define CALCULATOR_H_ 
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
 int add(float x, float y)
 {
     float res=0;

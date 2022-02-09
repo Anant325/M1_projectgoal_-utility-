@@ -1,5 +1,9 @@
 #include "calculator.h"
 #include <math.h>
+struct complex
+{
+  int  real, img;
+};
 
 int main()
 {  
