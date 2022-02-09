@@ -7,11 +7,6 @@
 
 #define CALCULATOR_H_ 
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-
-
 int add(float x, float y)
 {
     float res=0;
@@ -124,7 +119,7 @@ int area_circle(int radius)
  {
   printf("Volume is = %f\n",V);
  }
- int average(float a[],int n)
+int average(float a[],int n)
 {
   float sum=0,avg =0;
   for(int i=0; i< n; i++)
