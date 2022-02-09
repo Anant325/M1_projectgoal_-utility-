@@ -124,6 +124,55 @@ int area_circle(int radius)
  {
   printf("Volume is = %f\n",V);
  }
+ int average(float a[],int n)
+{
+  float sum=0,avg =0;
+  for(int i=0; i< n; i++)
+ {
+  sum = sum + a[i];
+ }
+  avg = sum/n;
+  printf("Average is %0.2f\n", avg);
+  
+}
+int Factorial (int k)
+{
+    
+      int  factorial = 1;
+    for(int i=1; i<=k; i++)
+    {
+        factorial = factorial * i;
+    }
+    printf("\n Factorial of %d is %d\n",k,factorial );
+}
+
+int pallindromenum(int n)
+{
+    int  reversed = 0, rem, original;
+    original=n;
+    while (n != 0) {
+        rem = n % 10;
+        reversed = reversed * 10 + rem;
+        n /= 10;
+    }
+    if (original == reversed)
+        printf("%d is a palindrome.\n", original);
+    else
+        printf("%d is not a palindrome.\n", original);
+}
+void BMI (int weight, float height){
+    float temp = weight/ (height * height);
+    printf("BMI = %f\n", temp);
+    printf("\nGrade: ");
+    temp < 18.5 ? printf("Under ") : temp < 25 ? printf("Normal ") : temp < 30 ? printf("Over ") : temp < 40 ? printf("Obese ") : printf("Error");
+} 
+int speed(int distance,int tim)
+{
+    int sp=0;
+     sp=distance/tim;
+    printf("speed is %d\n ",sp);
+}
+
 
 
 #endif

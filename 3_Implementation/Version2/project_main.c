@@ -16,6 +16,13 @@ int main()
     float side, base, length, breadth, height, area, radius;
     int che,q;
  float res=0;
+     float a[100];
+ int nol,sha=0;
+ int fact;
+ int numpall=0;
+   int w;
+  float h;
+  int  distance, tim;
    
  
     while(1)
@@ -32,10 +39,12 @@ int main()
     printf("Type Of Calculator\n");
     printf("1.Standard\n");
     printf("2.Sintific\n");
+     printf("3.Extra\n");
+    printf("4.Exit\n");
     scanf("%d",&ip);
-     if(ip==5)
+     if(ip==4)
                                                                                                                  break;
-    if(ip >=1 && ip <=2)
+    if(ip >=1 && ip <=3)
         {
                                                                                                                  
         if(ip==1)
@@ -375,6 +384,89 @@ int main()
 
                                                                                 
                                                                     }
+    }
+    else if(ip==3)
+    {
+          printf("You selected Extra Mode\n")  ;
+     printf("*****************************************************************************\n");
+      while(1)
+                                                                                             {
+       
+                                                                                                        
+                                                                                                         printf("\n1. Average \n");
+                                                                                                         printf("2. Factorial\n");
+                                                                                                         printf("3. Pallindrome\n");
+                                                                                                         printf("4. Speed Calculator\n");
+                                                                                                         printf("5. BMI\n");
+                                                                                                         printf("6. EXIT\n");
+                                                                                                         
+                                                                                                         
+                                                                                                        
+                                                                                                         printf("Enter Your Choice(1-6): ");
+                                                                                                         scanf("%d", &sha);
+                                                                                                                 if(sha==6)
+                                                                                                                 break;
+                                                                                                                if ( sha==1)
+                                                                                                                   { printf("You Selected Average Calculator\n");
+                                                                                                                       
+                                                                                                                       printf("Enter number to find average : \n");
+                                                                                                                       scanf("%d", &nol);
+                                                                                                                       printf("Enter numbers:\n");
+ for(int i=0; i< nol; i++)
+ {
+  printf("a[%d] = ", i);
+  scanf("%f", &an[i]);
+ }
+ average(an,nol);
+ 
+ 
+                                                                                                                   }
+                                                                                                                    else if (sha==2)
+                                                                                                                    {
+                                                                                                                         printf("You Selected Factorial Calculator\n");
+                                                                                                                         printf(" Enter the number :\n ");
+                                                                                                                         scanf("%d",&fact);
+                                                                                                                         Factorial(fact);
+                                                                                                                         
+                                                                                                                        
+                                                                                                                    }
+                                                                                                                    else if(sha ==3)
+                                                                                                                    {
+                                                                                                                      printf("You Selected Pallindrome\n");
+                                                                                                                      printf("Enter an integer: \n");
+                                                                                                                       scanf("%d", &numpall);
+                                                                                                                     pallindromenum (numpall);
+                                                                                                                      
+                                                                                                                    }
+                                                                                                                     else if(sha==5)
+                                                                                                                     {
+                                                                                                                          printf("You Selected BMI \n");
+                                                                                                                          printf("Input the weight:\n ");
+       scanf("%d", &w);
+       printf("Input the height in cm : \n");
+       scanf("%f", &h);
+       BMI(w, h);
+                                                                                                                         
+                                                                                                                          
+                                                                                                                     }
+                                                                                                                     else if (sha==4)
+                                                                                                                     {
+                                                                                                                       printf("You selected  Speed calculator \n");
+                                                                                                                        printf("Enter Your distance in KM\n");
+    scanf("%d", &distance);
+    printf("Enter Your time in Min\n");
+    scanf("%d", &tim);
+    speed(distance,tim);
+                                                                                                                     }
+                                                                                                                     else
+                                                                                                                    {
+                                                                                                                     printf("Invalid choice.\n");
+                                                                                                                     printf("\nPress any key to enter choice again...\n");
+                                                                                                                    } 
+                                                                                                                        
+                                                                                                                        
+                                                                                                                            
+                                                                                                } 
     }
     
     else {

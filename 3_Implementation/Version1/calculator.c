@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -115,25 +116,79 @@ int area_circle(int radius)
  {
   printf("Volume is = %f\n",V);
  }
- 
+int average(float a[],int n)
+{
+  float sum=0,avg =0;
+  for(int i=0; i< n; i++)
+ {
+  sum = sum + a[i];
+ }
+  avg = sum/n;
+  printf("Average is %0.2f\n", avg);
+  
+}
+int Factorial (int k)
+{
+    
+      int  factorial = 1;
+    for(int i=1; i<=k; i++)
+    {
+        factorial = factorial * i;
+    }
+    printf("\n Factorial of %d is %d\n",k,factorial );
+}
+
+int pallindromenum(int n)
+{
+    int  reversed = 0, rem, original;
+    original=n;
+    while (n != 0) {
+        rem = n % 10;
+        reversed = reversed * 10 + rem;
+        n /= 10;
+    }
+    if (original == reversed)
+        printf("%d is a palindrome.\n", original);
+    else
+        printf("%d is not a palindrome.\n", original);
+}
+void BMI (int weight, float height){
+    float temp = weight/ (height * height);
+    printf("BMI = %f\n", temp);
+    printf("\nGrade: ");
+    temp < 18.5 ? printf("Under ") : temp < 25 ? printf("Normal ") : temp < 30 ? printf("Over ") : temp < 40 ? printf("Obese ") : printf("Error");
+} 
+int speed(int distance,int tim)
+{
+    int sp=0;
+     sp=distance/tim;
+    printf("speed is %d\n ",sp);
+}
 
 struct complex
 {
-  int real, img;
-}; 
+  int  real, img;
+};
 int main()
 {  
     int ip,selc,sip,sel=0;
     float n1,n2;
     int ch;
-    int  x, y, z;
+    float  x, y, z;
     struct complex a, b, c;
      int fig_code;
     float side, base, length, breadth, height, area, radius;
     int che,q;
  float res=0;
+   float an[100];
+ int nol,sha=0;
+ int fact;
+ int numpall=0;
+   int w;
+  float h;
+  int  distance, tim;
    
- 
+  
     while(1)
     {
             printf("****************************************************************************************\n");
@@ -148,10 +203,13 @@ int main()
     printf("Type Of Calculator\n");
     printf("1.Standard\n");
     printf("2.Sintific\n");
+    printf("3.Extra\n");
+    printf("4.Exit\n");
+    
     scanf("%d",&ip);
-     if(ip==5)
+     if(ip==4)
                                                                                                                  break;
-    if(ip >=1 && ip <=2)
+    if(ip >=1 && ip <=3)
         {
                                                                                                                  
         if(ip==1)
@@ -293,14 +351,14 @@ int main()
                     {
                                     printf("Enter a and b where a + ib is the first complex number.");
                                     printf("\na = ");
-                                    scanf("%d", &a.real);
+                                    scanf("%f", &a.real);
                                     printf("b = ");
-                                    scanf("%d", &a.img);
+                                    scanf("%f", &a.img);
                                     printf("Enter c and d where c + id is the second complex number.");
                                     printf("\nc = ");
-                                    scanf("%d", &b.real);
+                                    scanf("%f", &b.real);
                                     printf("d = ");
-                                    scanf("%d", &b.img);
+                                    scanf("%f", &b.img);
                    }
                                    if (ch == 1)
                                {
@@ -308,9 +366,9 @@ int main()
                                      c.img = a.img + b.img;
 
                                         if (c.img >= 0)
-                                        printf("Sum of the complex numbers = %d + %d i", c.real, c.img);
+                                        printf("Sum of the complex numbers = %0.2f + %0.2f i", c.real, c.img);
                                         else
-                                        printf("Sum of the complex numbers = %d %d i", c.real, c.img);
+                                        printf("Sum of the complex numbers = %0.2f %0.2f i", c.real, c.img);
                                 }
                                    else if (ch == 2)
                                 {
@@ -318,9 +376,9 @@ int main()
                                      c.img = a.img - b.img;
 
                                          if (c.img >= 0)
-                                          printf("Difference of the complex numbers = %d + %d i", c.real, c.img);
+                                          printf("Difference of the complex numbers = %0.2f + %0.2f i", c.real, c.img);
                                          else
-                                          printf("Difference of the complex numbers = %d %d i", c.real, c.img);
+                                          printf("Difference of the complex numbers = %0.2f %0.2f i", c.real, c.img);
                                 }
                                 else if (ch == 3)
                                 {
@@ -328,9 +386,9 @@ int main()
                                c.img = a.img*b.real + a.real*b.img;
 
                                          if (c.img >= 0)
-                                         printf("Multiplication of the complex numbers = %d + %d i", c.real, c.img);
+                                         printf("Multiplication of the complex numbers = %0.2f + %0.2f i", c.real, c.img);
                                          else
-                                          printf("Multiplication of the complex numbers = %d %d i", c.real, c.img);
+                                          printf("Multiplication of the complex numbers = %0.2f %0.2f i", c.real, c.img);
                                 }
                                else if (ch == 4)
                                {
@@ -342,33 +400,33 @@ int main()
                                 y = a.img*b.real - a.real*b.img;
                                 z = b.real*b.real + b.img*b.img;
 
-                                if (x%z == 0 && y%z == 0)
+                                if (fmod(x,z) == 0 && fmod(y,z) == 0)
                                 {
                                 if (y/z >= 0)
-                                printf("Division of the complex numbers = %d + %d i", x/z, y/z);
+                                printf("Division of the complex numbers = %0.2f + %0.2f i", x/z, y/z);
                                 else
-                                printf("Division of the complex numbers = %d %d i", x/z, y/z);
+                                printf("Division of the complex numbers = %0.2f %0.2f i", x/z, y/z);
                                 }
-                                else if (x%z == 0 && y%z != 0)
+                                else if (fmod(x,z) == 0 && fmod(y,z) != 0)
                                 {
                                 if (y/z >= 0)
-                                printf("Division of two complex numbers = %d+ %d/%d i", x/z, y, z);
+                                printf("Division of two complex numbers = %0.2f+ %0.2f/%0.2f i", x/z, y, z);
                                 else
-                                printf("Division of two complex numbers = %d %d/%d i", x/z, y, z);
+                                printf("Division of two complex numbers = %0.2f %0.2f/%0.2f i", x/z, y, z);
                                 }
-                                else if (x%z != 0 && y%z == 0)
+                                else if (fmod(x,z) != 0 && fmod(y,z) == 0)
                                 {
                                 if (y/z >= 0)
-                                printf("Division of two complex numbers = %d/%d + %d i", x, z, y/z);
+                                printf("Division of two complex numbers = %0.2f/%0.2f + %0.2f i", x, z, y/z);
                                 else
-                                printf("Division of two complex numbers = %d %d/%d i", x, z, y/z);
+                                printf("Division of two complex numbers = %0.2f %0.2f/%0.2f i", x, z, y/z);
                                 }
                                 else
                                  {
                                   if (y/z >= 0)
-                                   printf("Division of two complex numbers = %d/%d + %d/%d i",x, z, y, z);
+                                   printf("Division of two complex numbers = %0.2f/%0.2f + %0.2f/%0.2f i",x, z, y, z);
                                   else
-                                   printf("Division of two complex numbers = %d/%d %d/%d i", x, z, y, z);
+                                   printf("Division of two complex numbers = %0.2f/%0.2f %0.2f/%0.2f i", x, z, y, z);
                                  }
                                }
                                }
@@ -376,7 +434,7 @@ int main()
                              printf("Invalid choice.");
                              printf("\nPress any key to enter choice again...\n");
                        }
-                                                                                               }
+                                                                                                }
                        
                        else if(sip==3)
                        {
@@ -493,6 +551,90 @@ int main()
                                                                     }
     }
     
+    else if(ip==3)
+    {
+          printf("You selected Extra Mode\n")  ;
+     printf("*****************************************************************************\n");
+      while(1)
+                                                                                             {
+       
+                                                                                                        
+                                                                                                         printf("\n1. Average \n");
+                                                                                                         printf("2. Factorial\n");
+                                                                                                         printf("3. Pallindrome\n");
+                                                                                                         printf("4. Speed Calculator\n");
+                                                                                                         printf("5. BMI\n");
+                                                                                                         printf("6. EXIT\n");
+                                                                                                         
+                                                                                                         
+                                                                                                        
+                                                                                                         printf("Enter Your Choice(1-6): ");
+                                                                                                         scanf("%d", &sha);
+                                                                                                                 if(sha==6)
+                                                                                                                 break;
+                                                                                                                if ( sha==1)
+                                                                                                                   { printf("You Selected Average Calculator\n");
+                                                                                                                       
+                                                                                                                       printf("Enter number to find average : \n");
+                                                                                                                       scanf("%d", &nol);
+                                                                                                                       printf("Enter numbers:\n");
+ for(int i=0; i< nol; i++)
+ {
+  printf("a[%d] = ", i);
+  scanf("%f", &an[i]);
+ }
+ average(an,nol);
+ 
+ 
+                                                                                                                   }
+                                                                                                                    else if (sha==2)
+                                                                                                                    {
+                                                                                                                         printf("You Selected Factorial Calculator\n");
+                                                                                                                         printf(" Enter the number :\n ");
+                                                                                                                         scanf("%d",&fact);
+                                                                                                                         Factorial(fact);
+                                                                                                                         
+                                                                                                                        
+                                                                                                                    }
+                                                                                                                    else if(sha ==3)
+                                                                                                                    {
+                                                                                                                      printf("You Selected Pallindrome\n");
+                                                                                                                      printf("Enter an integer: \n");
+                                                                                                                       scanf("%d", &numpall);
+                                                                                                                     pallindromenum (numpall);
+                                                                                                                      
+                                                                                                                    }
+                                                                                                                     else if(sha==5)
+                                                                                                                     {
+                                                                                                                          printf("You Selected BMI \n");
+                                                                                                                          printf("Input the weight:\n ");
+       scanf("%d", &w);
+       printf("Input the height in cm : \n");
+       scanf("%f", &h);
+       BMI(w, h);
+                                                                                                                         
+                                                                                                                          
+                                                                                                                     }
+                                                                                                                     else if (sha==4)
+                                                                                                                     {
+                                                                                                                       printf("You selected  Speed calculator \n");
+                                                                                                                        printf("Enter Your distance in KM\n");
+    scanf("%d", &distance);
+    printf("Enter Your time in Min\n");
+    scanf("%d", &tim);
+    speed(distance,tim);
+                                                                                                                     }
+                                                                                                                     else
+                                                                                                                    {
+                                                                                                                     printf("Invalid choice.\n");
+                                                                                                                     printf("\nPress any key to enter choice again...\n");
+                                                                                                                    } 
+                                                                                                                        
+                                                                                                                        
+                                                                                                                            
+                                                                                                } 
+    }
+    
     else {
         printf("Wronng Choice\n");   
     }
@@ -504,3 +646,8 @@ int main()
      
 return 0;
 }
+
+
+
+
+
