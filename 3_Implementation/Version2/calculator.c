@@ -125,7 +125,7 @@ int main()
     int ip,selc,sip,sel=0;
     float n1,n2;
     int ch;
-    float  x, y, z;
+    int   x, y, z;
     struct complex a, b, c;
      int fig_code;
     float side, base, length, breadth, height, area, radius;
@@ -271,7 +271,7 @@ int main()
                                                                                                                             
                                                                                                 }
                                                                                   }
-                                                                                             /*   
+                                                                                                
                                                                                                 else if(sip==2)
                                                                                                 {
           printf("You Selected Complex Calculator\n");
@@ -375,7 +375,7 @@ int main()
                              printf("Invalid choice.");
                              printf("\nPress any key to enter choice again...\n");
                        }
-                                                                                               }*/
+                                                                                               }
                        
                        else if(sip==3)
                        {
