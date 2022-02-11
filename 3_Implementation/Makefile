@@ -2,7 +2,7 @@
 #<TAB>commands
 #To check if the OS is Windows or Linux and set the executable file extension and delete command accordingly
 PROJ_NAME=Calculator
-SRC=src/project_main.c src/calculator.c 
+ SRC=src/project_main.c
 
 ifdef OS
    RM = del /q
@@ -16,11 +16,11 @@ else
    endif
 endif
 
-Build : $(SRC)
-	gcc  $(SRC)  -o $(call FixPath,$(PROJ_NAME).$(EXEC)) -lm 
+Build : 
+	gcc  project_main.c -Iinc -o $(call FixPath,$(PROJ_NAME).$(EXEC)) -lm 
 
 Run : Build
 	./$(call FixPath,$(PROJ_NAME).$(EXEC))
 
 Clean:
-	$(RM) $(call FixPath,*.out)
+	$(RM) $(call FixPath,*.out,*.exe)
